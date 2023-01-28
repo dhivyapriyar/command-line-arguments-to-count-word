@@ -6,17 +6,20 @@ PC
 Anaconda - Python 3.7
 ## ALGORITHM: 
 ### Step 1:
-Open the file in read mode and handle it in test mood.
+import sys
+
 ### Step 2: 
-Read the text using read() function.
+Initially make count = 0
+
 ### Step 3: 
-Split the text using space separator. We assume that words in a sentence are separted by a
-space character.
+Open the content file using command line arguments.
+
 ### Step 4:  
-The length of the split list should equal the numbers of words in the test file.
+by using for loop name the function as "line"
+
 ### Step 5: 
-You can refine the count by cleaning the string prior to splitting or validating the words
-after splitting.
+split the line using .split
+
 ### Step 6: 
 End the program.
 
@@ -26,22 +29,22 @@ command-line-arguments-to-count-word
 developed by: dhivyapriya. r
 register no.: 22008389
 ```
-fname = input("Enter file name: ")
+import sys
 
-num_words = 0
+count=0
 
-with open(fname, 'r') as f:
+with open(sys.argv[1],'r') as f:
 
-    for line in f:
+        for line in f:
 
-        words = line.split()
+            word=line.split()
 
-        num_words += len(words)
+            count+=len(word)
 
-print("Number of words: ", num_words)
+print("Word Count in File=",count)
 
 ### OUTPUT:
-![wordcount](./images/wordcount.png)
+![command](./images/command.png)
 
 
 
